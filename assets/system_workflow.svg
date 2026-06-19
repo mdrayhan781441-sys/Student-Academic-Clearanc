@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" width="100%" height="100%" style="background-color: #f8fafc; font-family: 'Arial', sans-serif;">
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a365d">CLEARANCE SYSTEM WORKFLOW</text>
+
+  <!-- 1. Student Login -->
+  <g transform="translate(200, 60)">
+    <rect width="200" height="40" rx="20" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+    <text x="100" y="24" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Student Logs In</text>
+  </g>
+
+  <!-- Arrow down -->
+  <path d="M 300,100 L 300,128" fill="none" stroke="#4a5568" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 2. Decision: Outstanding Dues? -->
+  <g transform="translate(200, 130)">
+    <polygon points="100,0 200,30 100,60 0,30" fill="#ecc94b" stroke="#d69e2e" stroke-width="1"/>
+    <text x="100" y="34" text-anchor="middle" fill="#1a202c" font-size="10" font-weight="bold">Outstanding Dues?</text>
+  </g>
+
+  <!-- Arrow Left (Yes) -->
+  <path d="M 200,160 L 120,160 L 120,208" fill="none" stroke="#4a5568" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="150" y="152" font-size="10" font-weight="bold" fill="#e53e3e">Yes</text>
+
+  <!-- 3. Pay Dues / Return Books -->
+  <g transform="translate(30, 210)">
+    <rect width="180" height="40" rx="4" fill="#ffffff" stroke="#cbd5e0" stroke-width="1.5"/>
+    <text x="90" y="24" text-anchor="middle" fill="#2d3748" font-size="10" font-weight="bold">Pay Dues / Return Books</text>
+  </g>
+
+  <!-- Return arrow from Pay Dues back to Decision -->
+  <path d="M 120,210 L 120,115 L 290,115 L 290,128" fill="none" stroke="#4a5568" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrow Down (No) -->
+  <path d="M 300,190 L 300,218" fill="none" stroke="#4a5568" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="310" y="206" font-size="10" font-weight="bold" fill="#38a169">No</text>
+
+  <!-- 4. Submit Request -->
+  <g transform="translate(200, 220)">
+    <rect width="200" height="40" rx="4" fill="#ffffff" stroke="#cbd5e0" stroke-width="1.5"/>
+    <text x="100" y="24" text-anchor="middle" fill="#2d3748" font-size="10" font-weight="bold">Submit Clearance Request</text>
+  </g>
+
+  <!-- Arrow Down -->
+  <path d="M 300,260 L 300,288" fill="none" stroke="#4a5568" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 5. Admin Review -->
+  <g transform="translate(200, 290)">
+    <rect width="200" height="40" rx="4" fill="#edf2f7" stroke="#cbd5e0" stroke-width="1.5"/>
+    <text x="100" y="24" text-anchor="middle" fill="#1a365d" font-size="10" font-weight="bold">Department &amp; Library Review</text>
+  </g>
+
+  <!-- Arrow Left (Rejected) -->
+  <path d="M 200,310 L 120,310 L 120,252" fill="none" stroke="#e53e3e" stroke-dasharray="4" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="135" y="302" font-size="10" font-weight="bold" fill="#e53e3e">Reject</text>
+
+  <!-- Arrow Down (Approved) -->
+  <path d="M 300,330 L 300,358" fill="none" stroke="#38a169" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="310" y="346" font-size="10" font-weight="bold" fill="#38a169">Approve</text>
+
+  <!-- 6. Super Admin Action -->
+  <g transform="translate(200, 360)">
+    <rect width="200" height="40" rx="4" fill="#edf2f7" stroke="#cbd5e0" stroke-width="1.5"/>
+    <text x="100" y="24" text-anchor="middle" fill="#1a365d" font-size="10" font-weight="bold">Super Admin Final Sign-off</text>
+  </g>
+
+  <!-- Arrow Down (Approve) -->
+  <path d="M 300,400 L 300,428" fill="none" stroke="#38a169" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 7. Certificate Generated -->
+  <g transform="translate(200, 430)">
+    <rect width="200" height="40" rx="4" fill="#38a169" stroke="#38a169" stroke-width="1"/>
+    <text x="100" y="24" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Digital Certificate Generated</text>
+  </g>
+
+</svg>

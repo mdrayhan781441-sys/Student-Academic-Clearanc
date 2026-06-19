@@ -1,0 +1,1640 @@
+/* 
+   Outstanding, Premium, Modern Student Clearance System UI
+   Theme: Dark Charcoal / Graphite with Orange Accent (#f68b1f) & Lime Glow
+*/
+
+:root {
+    --acad-navy: #f68b1f; /* Orange Accent */
+    --acad-slate: #94a3b8; /* Soft Slate / Gray */
+    --acad-border: rgba(255, 255, 255, 0.08); /* Transparent borders for glassmorphism */
+    --acad-bg: #121214; /* Midnight Dark Charcoal / Graphite BG */
+    --acad-white: rgba(25, 25, 28, 0.7); /* Dark Glass Card Background */
+    --acad-success: #84cc16; /* Lime Accent */
+    
+    /* Premium Dashboard Variables */
+    --p-primary: #f68b1f; /* Vibrant Premium Orange */
+    --p-primary-light: #ffa447; /* Soft Glow Orange */
+    --p-primary-dark: #d37310; /* Accent Dark Orange */
+    --p-success: #84cc16; /* Soft Lime Glow Accent */
+    --p-warning: #f59e0b;
+    --p-danger: #ef4444;
+    --p-text-main: #ffffff; /* Primary Text: White */
+    --p-text-muted: #94a3b8; /* Secondary Text: Soft Gray */
+    --p-card-bg: rgba(20, 20, 22, 0.75); /* Deep Graphite Glass BG */
+    --p-card-border: rgba(255, 255, 255, 0.06); /* Soft Border */
+    --p-shadow: 0 20px 50px rgba(0, 0, 0, 0.55); /* Elegant Dark Shadow */
+}
+
+
+body[data-page="student-dashboard"] {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    background-color: var(--acad-bg) !important;
+}
+
+/* Sidebar - Structured & Formal */
+body[data-page="student-dashboard"] .sidebar {
+    background-color: #0f172a !important; /* Midnight Navy */
+    border-right: 1px solid var(--acad-border) !important;
+    width: 260px !important;
+    padding: 25px 0 !important;
+}
+
+body[data-page="student-dashboard"] .sidebar-top {
+    padding: 0 25px 30px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+body[data-page="student-dashboard"] .sidebar-link {
+    padding: 12px 25px !important;
+    font-weight: 500 !important;
+    color: #94a3b8 !important;
+    border-left: 4px solid transparent !important;
+    border-radius: 0 !important;
+}
+
+body[data-page="student-dashboard"] .sidebar-link.active {
+    background-color: rgba(255,255,255,0.05) !important;
+    color: white !important;
+    border-left-color: #3b82f6 !important;
+}
+
+/* Main Content area */
+body[data-page="student-dashboard"] .main-content {
+    padding: 40px !important;
+    margin-left: 260px !important;
+}
+
+/* Formal Header */
+.acad-header {
+    background-color: var(--acad-white);
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid var(--acad-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.acad-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--acad-navy);
+}
+
+/* Academic Profile Card */
+.profile-card-acad {
+    background: rgba(20, 20, 22, 0.65) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+.profile-card-acad .header-strip {
+    height: 8px !important;
+    background: linear-gradient(90deg, #f68b1f, #84cc16) !important;
+}
+
+.profile-card-acad .body {
+    padding: 40px !important;
+    display: flex !important;
+    gap: 40px !important;
+    background: transparent !important;
+}
+
+.acad-avatar {
+    width: 120px !important;
+    height: 120px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 48px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+}
+
+.acad-info-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+.acad-info-table td {
+    padding: 12px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    color: #ffffff !important;
+}
+
+.acad-info-table .label {
+    width: 150px !important;
+    color: #94a3b8 !important;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+.acad-info-table .value {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+}
+
+.profile-card-acad input.edit-mode {
+    background: rgba(12, 12, 14, 0.8) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+}
+
+/* Edit Profile Buttons */
+#editProfileBtn,
+#cancelEditBtn {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+    padding: 10px 20px !important;
+}
+
+#editProfileBtn:hover,
+#cancelEditBtn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+#saveProfileBtn {
+    background: linear-gradient(135deg, #f68b1f 0%, #d37310 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(246, 139, 31, 0.25) !important;
+    padding: 10px 20px !important;
+}
+
+/* Top Bar Overrides */
+body[data-page="student-dashboard"] .top-bar {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--p-card-border) !important;
+    border-radius: 24px !important;
+    padding: 15px 30px !important;
+    margin-bottom: 40px !important;
+    box-shadow: var(--p-shadow) !important;
+    position: sticky !important;
+    top: 20px !important;
+}
+
+/* Hero Section */
+body[data-page="student-dashboard"] .profile-header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+    padding: 45px !important;
+    border-radius: 35px !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 35px !important;
+    margin-bottom: 40px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important;
+    border: none !important;
+}
+
+body[data-page="student-dashboard"] .profile-header::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -50px !important;
+    right: -50px !important;
+    width: 250px !important;
+    height: 250px !important;
+    background: var(--p-primary) !important;
+    filter: blur(100px) !important;
+    opacity: 0.3 !important;
+    border-radius: 50% !important;
+}
+
+body[data-page="student-dashboard"] .profile-avatar-large {
+    width: 110px !important;
+    height: 110px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 55px !important;
+}
+
+body[data-page="student-dashboard"] .profile-info-main h1 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 38px !important;
+    letter-spacing: -1.5px !important;
+    margin: 0 !important;
+}
+
+body[data-page="student-dashboard"] .profile-info-main p {
+    color: #94a3b8 !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    margin-top: 10px !important;
+}
+
+/* Card Styling */
+body[data-page="student-dashboard"] .card {
+    background: var(--p-card-bg) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--p-card-border) !important;
+    border-radius: 30px !important;
+    padding: 30px !important;
+    box-shadow: var(--p-shadow) !important;
+    margin-bottom: 25px !important;
+}
+
+body[data-page="student-dashboard"] .card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--p-primary-light) !important;
+}
+
+/* Progress Section */
+body[data-page="student-dashboard"] .progress-bar-container {
+    height: 20px !important;
+    background: #e2e8f0 !important;
+    border-radius: 50px !important;
+    margin: 15px 0 !important;
+}
+
+body[data-page="student-dashboard"] .progress-bar-fill {
+    height: 100% !important;
+    background: linear-gradient(90deg, var(--p-primary), var(--p-primary-light)) !important;
+    border-radius: 50px !important;
+    font-weight: 800 !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 11px !important;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Due Items Styling */
+body[data-page="student-dashboard"] .due-item {
+    background: white !important;
+    border-radius: 24px !important;
+    padding: 25px !important;
+    border: 1px solid #f1f5f9 !important;
+    margin-bottom: 15px !important;
+    transition: all 0.3s !important;
+}
+
+body[data-page="student-dashboard"] .due-item:hover {
+    background: #f8fafc !important;
+    border-color: var(--p-primary-light) !important;
+    transform: scale(1.02) !important;
+}
+
+body[data-page="student-dashboard"] .due-title {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Timeline */
+body[data-page="student-dashboard"] .timeline-step .step-icon {
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 18px !important;
+    font-size: 22px !important;
+    background: #f1f5f9 !important;
+}
+
+body[data-page="student-dashboard"] .timeline-step.completed .step-icon {
+    background: var(--p-success) !important;
+    color: white !important;
+}
+
+body[data-page="student-dashboard"] .timeline-step.active .step-icon {
+    background: var(--p-primary) !important;
+    color: white !important;
+}
+
+/* Buttons */
+body[data-page="student-dashboard"] .btn-primary {
+    background: linear-gradient(90deg, var(--p-primary), var(--p-primary-dark)) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 18px 35px !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    color: white !important;
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.25) !important;
+}
+
+/* Dashboard Grid Top */
+.dashboard-grid-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.card-label {
+    font-weight: 700;
+    color: var(--p-text-main);
+    font-size: 16px;
+}
+
+.card-value {
+    font-weight: 800;
+    color: var(--p-primary);
+    font-size: 20px;
+}
+
+.card-footer-info {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    font-size: 13px;
+    color: var(--p-text-muted);
+    font-weight: 500;
+}
+
+.qr-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-label {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--p-text-main);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 15px;
+}
+
+.qr-subtext {
+    font-size: 12px;
+    color: var(--p-text-muted);
+    margin: 8px 0 0;
+}
+
+/* Timeline Horizontal Styling */
+.timeline-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-connector {
+    flex: 1;
+    height: 4px;
+    background: #e2e8f0;
+    margin: 0 15px;
+    border-radius: 2px;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 1;
+}
+
+.step-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--p-text-muted);
+}
+
+.timeline-step.completed .step-label,
+.timeline-step.active .step-label {
+    color: var(--p-text-main);
+}
+
+/* Personal Information Grid */
+.student-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.info-item {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    border: 1px solid #f1f5f9;
+}
+
+.info-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--p-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--p-text-main);
+}
+
+/* Notifications area */
+body[data-page="student-dashboard"] .action-notification {
+    border-radius: 28px !important;
+    padding: 30px !important;
+    margin-bottom: 30px !important;
+    box-shadow: var(--p-shadow) !important;
+    border: none !important;
+}
+
+body[data-page="student-dashboard"] .notification-approved {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5) !important;
+    color: #065f46 !important;
+}
+
+body[data-page="student-dashboard"] .notification-final-approved {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe) !important;
+    color: #1e40af !important;
+}
+
+/* Dashboard Grid Bottom */
+.dashboard-grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* Activity Timeline */
+.activity-timeline {
+    position: relative;
+    padding-left: 20px;
+}
+
+.activity-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.activity-item {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.activity-item::after {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--p-primary);
+}
+
+.activity-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--p-text-main);
+}
+
+.activity-time {
+    font-size: 11px;
+    color: var(--p-text-muted);
+}
+
+/* Due Items Layout */
+.due-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.due-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--p-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--p-text-main);
+}
+
+.due-status-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Summary Section */
+.summary-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.summary-item {
+    background: rgba(20, 20, 22, 0.65) !important;
+    padding: 20px !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    text-align: center !important;
+    color: #ffffff !important;
+}
+
+.summary-item.highlight {
+    background: linear-gradient(135deg, var(--p-primary), var(--p-primary-dark)) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 10px 20px rgba(246, 139, 31, 0.25) !important;
+}
+
+.summary-item.highlight .summary-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.summary-item.highlight .summary-value {
+    color: white;
+}
+
+.summary-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--p-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.summary-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--p-text-main);
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-full {
+    width: 100% !important;
+}
+
+/* Alerts */
+.info-alert {
+    background: rgba(99, 102, 241, 0.05);
+    border-left: 4px solid var(--p-primary);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+.info-alert strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--p-primary-dark);
+}
+
+.info-alert p {
+    font-size: 13px;
+    color: var(--p-text-muted);
+    line-height: 1.6;
+}
+
+.warning-alert {
+    background: rgba(245, 158, 11, 0.05);
+    border-left-color: var(--p-warning);
+}
+
+.warning-alert strong {
+    color: var(--p-warning);
+}
+
+/* Certificate */
+.cert-icon-large {
+    font-size: 80px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+/* Table Responsive */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 20px;
+}
+
+/* Document Grid */
+.doc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.doc-item {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doc-info h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.doc-info p {
+    font-size: 11px;
+    color: var(--p-text-muted);
+}
+
+/* Support Center */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+}
+
+.faq-question {
+    font-weight: 700;
+    color: var(--p-primary-dark);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.faq-answer {
+    font-size: 13px;
+    color: var(--p-text-muted);
+    line-height: 1.5;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 18px;
+    border: 1px solid #f1f5f9;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background: #f8fafc;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.contact-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--p-text-main);
+}
+
+.contact-detail {
+    font-size: 12px;
+    color: var(--p-primary);
+    font-weight: 600;
+}
+
+/* Announcements Student */
+.ann-list-student {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ann-card-item {
+    background: white;
+    padding: 25px;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.ann-card-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: var(--p-primary);
+}
+
+.ann-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.ann-card-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--p-text-main);
+}
+
+.ann-card-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--p-text-muted);
+}
+
+.ann-card-msg {
+    font-size: 15px;
+    color: var(--p-text-muted);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.ann-card-footer {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--p-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    body[data-page="student-dashboard"] .sidebar {
+        width: 80px !important;
+        padding: 20px 10px !important;
+    }
+    body[data-page="student-dashboard"] .sidebar-link span {
+        margin: 0 !important;
+    }
+    body[data-page="student-dashboard"] .sidebar-link {
+        justify-content: center !important;
+        padding: 15px !important;
+    }
+    body[data-page="student-dashboard"] .sidebar-link span + text,
+    body[data-page="student-dashboard"] .sidebar-link text {
+        display: none !important;
+    }
+    body[data-page="student-dashboard"] .main-content {
+        margin-left: 80px !important;
+        padding: 30px 20px !important;
+    }
+}
+
+/* Premium Profile Redesign */
+.profile-premium-container { padding: 0; margin: -40px -50px; }
+.profile-banner { height: 200px; background: linear-gradient(135deg, #4361ee, #7209b7, #f72585); position: relative; border-radius: 0 0 50px 50px; overflow: hidden; }
+.banner-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%); }
+.profile-content-wrapper { display: flex; gap: 40px; padding: 0 60px 60px; margin-top: -80px; position: relative; }
+.profile-sidebar-card { flex: 0 0 340px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); padding: 40px; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); text-align: center; border: 1px solid white; }
+.profile-avatar-wrapper { position: relative; width: 160px; height: 160px; margin: 0 auto 30px; }
+.profile-avatar-main { width: 100%; height: 100%; background: linear-gradient(135deg, #6366f1, #a855f7); border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 64px; font-weight: 800; color: white; border: 8px solid white; box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3); }
+.status-indicator { position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; border-radius: 50%; border: 6px solid white; }
+.status-indicator.online { background: #10b981; }
+.profile-name-main { font-size: 28px; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
+.profile-id-sub { color: #64748b; font-size: 16px; font-weight: 600; margin-bottom: 30px; }
+.profile-badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.badge-premium { background: #fff7ed; color: #9a3412; padding: 8px 18px; border-radius: 14px; font-size: 13px; font-weight: 700; border: 1px solid #ffedd5; }
+.badge-dept { background: #f5f3ff; color: #5b21b6; padding: 8px 18px; border-radius: 14px; font-size: 13px; font-weight: 700; border: 1px solid #ede9fe; }
+.profile-main-details { flex: 1; display: flex; flex-direction: column; gap: 30px; }
+.info-card { background: white; padding: 40px; border-radius: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; }
+.info-card-header { display: flex; align-items: center; gap: 20px; margin-bottom: 35px; }
+.info-card-header .icon { font-size: 28px; background: #f8fafc; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 18px; border: 1px solid #f1f5f9; }
+.info-card-header h3 { font-size: 20px; font-weight: 800; color: #1e293b; }
+.info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+.info-item label { display: block; font-size: 11px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+.info-item p { font-size: 17px; font-weight: 700; color: #334155; }
+.status-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+.status-dot.active { background: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.5); }
+
+/* Announcement Ticker Styling */
+/* TV Bulletin Announcement Ticker - Outstanding Premium & Futuristic */
+.announcement-ticker-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    background: rgba(20, 20, 22, 0.75) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(132, 204, 22, 0.15) !important; /* Soft lime border glow */
+    border-radius: 16px !important;
+    padding: 0 !important;
+    height: 48px !important;
+    margin-bottom: 30px !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(132, 204, 22, 0.03) !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.ticker-badge {
+    height: 100% !important;
+    background: linear-gradient(135deg, #f68b1f 0%, #d37310 100%) !important;
+    color: white !important;
+    padding: 0 20px !important;
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-shadow: 8px 0 16px rgba(0, 0, 0, 0.3) !important;
+    z-index: 10 !important;
+    border-top-left-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+}
+
+.ticker-wrap {
+    flex: 1 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    position: relative !important;
+}
+
+/* Elegant TV fading effects at the edges of the ticker slot */
+.ticker-wrap::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 30px !important;
+    background: linear-gradient(90deg, rgba(20, 20, 22, 0.95), transparent) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+.ticker-wrap::after {
+    content: '' !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 30px !important;
+    background: linear-gradient(-90deg, rgba(20, 20, 22, 0.95), transparent) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+.ticker-items {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    animation: marquee-bulletin var(--ticker-duration, 35s) linear infinite !important;
+    padding-left: 20px !important;
+}
+
+.ticker-items:hover {
+    animation-play-state: paused !important;
+    cursor: pointer !important;
+}
+
+.ticker-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    padding: 0 40px !important;
+    color: #cbd5e1 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
+    position: relative !important;
+}
+
+.ticker-item strong {
+    color: #f68b1f !important; /* Title in orange */
+    margin-right: 8px !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    letter-spacing: 0.5px !important;
+}
+
+.ticker-item::after {
+    content: '✦' !important; /* Futuristic separator */
+    position: absolute !important;
+    right: -10px !important;
+    color: rgba(132, 204, 22, 0.5) !important; /* Glowing lime separator */
+    font-size: 14px !important;
+    text-shadow: 0 0 8px rgba(132, 204, 22, 0.5) !important;
+}
+
+@keyframes marquee-bulletin {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0); /* Loop seamlessly */
+    }
+}
+
+/* ==========================================================================
+   PREMIUM GRAPHITE & FUTURISTIC DARK MODE SYSTEM OVERRIDES
+   Color Palette: Deep Graphite (#121214) | Accent Orange (#f68b1f) | Accent Lime (#84cc16)
+   ========================================================================== */
+
+/* Page Background */
+body[data-page="student-dashboard"] {
+    background-color: #121214 !important;
+    color: #ffffff !important;
+}
+
+body[data-page="student-dashboard"] .main-content {
+    background-color: #121214 !important;
+}
+
+/* Glassmorphism Cards with Soft Lime Glow */
+body[data-page="student-dashboard"] .card,
+.profile-sidebar-card,
+.info-card {
+    background: rgba(20, 20, 22, 0.65) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(132, 204, 22, 0.15) !important; /* Soft lime border glow */
+    border-radius: 30px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 0 15px rgba(132, 204, 22, 0.04) !important;
+    color: #ffffff !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+body[data-page="student-dashboard"] .card:hover,
+.profile-sidebar-card:hover,
+.info-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(132, 204, 22, 0.35) !important; /* Stronger lime glow */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 25px rgba(132, 204, 22, 0.18) !important;
+}
+
+/* Due Liabilities Items */
+body[data-page="student-dashboard"] .due-item {
+    background: rgba(28, 28, 30, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 24px !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+body[data-page="student-dashboard"] .due-item:hover {
+    background: rgba(35, 35, 38, 0.85) !important;
+    border-color: rgba(246, 139, 31, 0.5) !important; /* Orange Border Accent */
+    box-shadow: 0 10px 30px rgba(246, 139, 31, 0.1) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Sidebar Overrides - Cyber Charcoal */
+body[data-page="student-dashboard"] .sidebar {
+    background-color: #0c0c0e !important; /* Midnight Obsidian */
+    border-right: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+body[data-page="student-dashboard"] .sidebar-link {
+    color: #8f9cae !important;
+    transition: all 0.3s ease !important;
+}
+
+body[data-page="student-dashboard"] .sidebar-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+body[data-page="student-dashboard"] .sidebar-link.active {
+    background-color: rgba(246, 139, 31, 0.08) !important; /* Transparent orange */
+    color: #ffffff !important;
+    border-left-color: #f68b1f !important; /* Vibrant orange active line */
+    box-shadow: inset 10px 0 20px rgba(246, 139, 31, 0.02);
+}
+
+/* Top Bar Overrides - Glass Bar */
+body[data-page="student-dashboard"] .top-bar {
+    background: rgba(20, 20, 22, 0.6) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+    border-radius: 20px !important;
+}
+
+.page-title {
+    color: #ffffff !important;
+}
+
+/* Welcome Banner Redesign */
+body[data-page="student-dashboard"] .profile-header {
+    background: linear-gradient(135deg, #1c1c1e 0%, #0d0d0f 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45) !important;
+}
+
+body[data-page="student-dashboard"] .profile-avatar-large {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #f68b1f !important;
+}
+
+/* Academic Profile Labels & Values */
+.info-item {
+    background: rgba(28, 28, 30, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.info-label, .due-title, .faq-question, .contact-name {
+    color: #c5d1e0 !important;
+}
+
+.info-value, .due-stats .stat-value {
+    color: #ffffff !important;
+}
+
+/* Status Badges with Custom Accent Glows */
+.status-badge {
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    border-radius: 12px !important;
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.status-badge.status-pending {
+    background: rgba(245, 158, 11, 0.12) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(245, 158, 11, 0.3) !important;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.08) !important;
+}
+
+.status-badge.status-approved {
+    background: rgba(132, 204, 22, 0.12) !important;
+    color: #a3e635 !important;
+    border: 1px solid rgba(132, 204, 22, 0.3) !important;
+    box-shadow: 0 0 15px rgba(132, 204, 22, 0.08) !important;
+}
+
+.status-badge.status-rejected {
+    background: rgba(239, 68, 68, 0.12) !important;
+    color: #fca5a5 !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.08) !important;
+}
+
+/* Form Controls & Inputs */
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+input[type="text"],
+select,
+textarea {
+    background: rgba(20, 20, 22, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 14px 18px !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: rgba(246, 139, 31, 0.6) !important; /* Orange accent glow */
+    outline: none !important;
+    box-shadow: 0 0 15px rgba(246, 139, 31, 0.25), inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Tables Styling */
+.table {
+    background: transparent !important;
+}
+
+.history-table {
+    background: transparent !important;
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 12px !important;
+    margin-top: 10px !important;
+}
+
+.history-table tbody tr {
+    background: rgba(20, 20, 22, 0.65) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.history-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+.history-table th, .table th {
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #94a3b8 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 15px 12px !important;
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+}
+
+.history-table td, .table td {
+    color: #e2e8f0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    padding: 18px 12px !important;
+    font-size: 14px !important;
+}
+
+.history-table td {
+    border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+.history-table td:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 14px 0 0 14px !important;
+}
+
+.history-table td:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 0 14px 14px 0 !important;
+}
+
+/* Premium Buttons - Vibrant Orange and Clean Secondary */
+.btn-primary {
+    background: linear-gradient(135deg, #f68b1f 0%, #d37310 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 16px 30px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 10px 20px rgba(246, 139, 31, 0.25) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 15px 30px rgba(246, 139, 31, 0.4) !important;
+}
+
+.btn-primary:active {
+    transform: translateY(0) !important;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Announcement Ticker Dark Override */
+.announcement-ticker-container {
+    background: rgba(20, 20, 22, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.ticker-items {
+    color: #cbd5e1 !important;
+}
+
+/* Notification Popups */
+.notif-dropdown {
+    background: rgba(20, 20, 22, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+.notif-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+.notif-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    color: #e2e8f0 !important;
+}
+
+.notif-item h4 {
+    color: #f68b1f !important;
+}
+
+/* Chat & Appeal Modals */
+.modal-content {
+    background: rgba(18, 18, 20, 0.95) !important;
+    backdrop-filter: blur(30px) !important;
+    -webkit-backdrop-filter: blur(30px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.65) !important;
+}
+
+.modal-header h2 {
+    color: #ffffff !important;
+}
+
+.chat-messages {
+    background: rgba(12, 12, 14, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Premium Profile Redesign Tab */
+.profile-banner {
+    background: linear-gradient(135deg, #f68b1f, #a05007, #532301) !important; /* Orange Banner Gradient */
+}
+
+.profile-sidebar-card {
+    background: rgba(20, 20, 22, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.profile-avatar-main {
+    background: linear-gradient(135deg, #f68b1f, #d37310) !important;
+    box-shadow: 0 20px 40px rgba(246, 139, 31, 0.25) !important;
+}
+
+.badge-premium {
+    background: rgba(246, 139, 31, 0.1) !important;
+    color: #f68b1f !important;
+    border: 1px solid rgba(246, 139, 31, 0.2) !important;
+}
+
+.badge-dept {
+    background: rgba(132, 204, 22, 0.1) !important;
+    color: #a3e635 !important;
+    border: 1px solid rgba(132, 204, 22, 0.2) !important;
+}
+
+.highlight-text {
+    color: #f68b1f !important;
+}
+
+/* Chat Module - Premium Dark Overhaul */
+.chat-container {
+    display: grid !important;
+    grid-template-columns: 280px 1fr !important;
+    gap: 0 !important;
+    height: 600px !important;
+    background: rgba(20, 20, 22, 0.8) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45) !important;
+}
+
+.student-chat-list {
+    border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+    background: rgba(15, 15, 17, 0.8) !important;
+    overflow-y: auto !important;
+}
+
+.chat-student-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 18px 15px !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+.chat-student-item:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.chat-student-item.active {
+    background: rgba(246, 139, 31, 0.08) !important;
+    border-left: 3px solid #f68b1f !important;
+}
+
+.chat-avatar {
+    width: 42px !important;
+    height: 42px !important;
+    background: linear-gradient(135deg, #f68b1f 0%, #d37310 100%) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 10px rgba(246, 139, 31, 0.2) !important;
+}
+
+.chat-name {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+.chat-last-msg {
+    font-size: 11px !important;
+    color: #94a3b8 !important;
+}
+
+.chat-view {
+    display: flex !important;
+    flex-direction: column !important;
+    background: rgba(10, 10, 12, 0.4) !important;
+}
+
+.chat-placeholder {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    color: #94a3b8 !important;
+}
+
+.chat-icon {
+    font-size: 56px !important;
+    margin-bottom: 15px !important;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)) !important;
+}
+
+.chat-window {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+.chat-header {
+    padding: 18px 24px !important;
+    background: rgba(15, 15, 17, 0.9) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.chat-header h4 {
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+.chat-messages {
+    flex: 1 !important;
+    padding: 24px !important;
+    overflow-y: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    background: rgba(12, 12, 14, 0.5) !important;
+}
+
+.msg {
+    max-width: 75% !important;
+    padding: 12px 18px !important;
+    border-radius: 18px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+.msg.received {
+    align-self: flex-start !important;
+    background: rgba(28, 28, 30, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: #ffffff !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.msg.sent {
+    align-self: flex-end !important;
+    background: linear-gradient(135deg, #f68b1f 0%, #d37310 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(246, 139, 31, 0.25) !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+.chat-input-area {
+    padding: 18px 24px !important;
+    background: rgba(15, 15, 17, 0.9) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.chat-input-area input {
+    flex: 1 !important;
+}
+
+/* ==========================================================================
+   PAGE HEADERS, CARD HEADERS, & ALERTS CONTRAST OVERRIDES
+   ========================================================================== */
+
+/* Page Headers on Student Dashboard */
+body[data-page="student-dashboard"] .page-header h1 {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+body[data-page="student-dashboard"] .page-header p {
+    color: #94a3b8 !important;
+}
+
+/* Card Header Headings Override */
+body[data-page="student-dashboard"] .card-header h2,
+body[data-page="student-dashboard"] .card-header h3,
+body[data-page="student-dashboard"] .card h2,
+body[data-page="student-dashboard"] .card h3 {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+/* Form Labels Override */
+body[data-page="student-dashboard"] label {
+    color: #cbd5e1 !important;
+}
+
+/* Rejection & Warning Box Premium Overrides (Replaces inline bright colors) */
+body[data-page="student-dashboard"] #rejectionReason,
+body[data-page="student-dashboard"] div[style*="background: #fff3e5"],
+body[data-page="student-dashboard"] div[style*="background:#fff3e5"] {
+    background: rgba(239, 68, 68, 0.1) !important;
+    border: 1px solid rgba(239, 68, 68, 0.25) !important;
+    border-left: 4px solid #ef4444 !important;
+    color: #fca5a5 !important;
+    padding: 15px !important;
+    border-radius: 12px !important;
+}
+
+body[data-page="student-dashboard"] div[style*="background: #fff3cd"],
+body[data-page="student-dashboard"] div[style*="background:#fff3cd"] {
+    background: rgba(245, 158, 11, 0.1) !important;
+    border: 1px solid rgba(245, 158, 11, 0.2) !important;
+    border-left: 4px solid #f59e0b !important;
+    color: #fef08a !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+}
+
+body[data-page="student-dashboard"] div[style*="background: #fff3cd"] strong,
+body[data-page="student-dashboard"] div[style*="background:#fff3cd"] strong {
+    color: #ffffff !important;
+}
+
+body[data-page="student-dashboard"] div[style*="background: #fff3cd"] p,
+body[data-page="student-dashboard"] div[style*="background:#fff3cd"] p {
+    color: #fef08a !important;
+}
+
+/* Student Modal Header & Footer & Inputs Styling */
+.modal-header {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    padding: 20px 25px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.modal-footer {
+    background: transparent !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    padding: 15px 25px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+}
+
+.modal-body {
+    padding: 25px !important;
+    color: #ffffff !important;
+}
+
+.modal-close {
+    border: none !important;
+    background: transparent !important;
+    font-size: 24px !important;
+    cursor: pointer !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    transition: color 0.2s ease !important;
+}
+
+.modal-close:hover {
+    color: #ffffff !important;
+}
+
+.modal-content div[style*="color: #1e293b"],
+.modal-content div[style*="color:#1e293b"] {
+    color: #ffffff !important;
+}
+
+.modal-content textarea,
+.modal-content select,
+.modal-content input[type="text"],
+.modal-content input[type="file"] {
+    background: rgba(20, 20, 22, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Cancel Button Override */
+.modal-content .btn-secondary,
+.modal-content button.btn-secondary {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.modal-content .btn-secondary:hover,
+.modal-content button.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Chat modal messages container override */
+.modal-content .chat-messages {
+    background: rgba(12, 12, 14, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Student Profile Tab Overrides Refactored into base classes */
+
+
